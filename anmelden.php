@@ -1,10 +1,9 @@
 <?php
-if (isset($_POST["submit"])) {
-    if ($_POST["inputPassword"] == "123") && ($_POST["inputName"] == "stachsim") {
-        echo "Erfolg!";
-        header("Location: index.php");
+if (isset($_GET["inputName"])) {
+    if (($_GET["inputName"] == "stachsim") and ($_GET["inputPassword"] == "123")){
+        header("Location: test.php");
     } else {
-        echo "Benutzername oder Passwort falsch!";
+        echo "Erfolg!";
     }
 }
 ?>
