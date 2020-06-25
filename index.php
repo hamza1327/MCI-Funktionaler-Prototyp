@@ -6,7 +6,8 @@ include 'anmelden.php';
 <head>
     <!-- CSS -->
 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/signin.css" rel="stylesheet">
+<link href="css/anmelden.css" rel="stylesheet">
+
 </head>
 
   <body>
@@ -14,7 +15,7 @@ include 'anmelden.php';
 
       <div class="row">
         <div class = "th-image">
-          <img src="assets/th-koeln-logo.jpg" alt="" width="175" height="95.2">
+          <img src="assets/th-koeln-logo.jpg" alt="" width="175" height="95.2" style="margin-top: 20px; margin-left: 30px; margin-bottom: 20px">
         </div>
       </div>
 
@@ -22,12 +23,14 @@ include 'anmelden.php';
           <p style="font-size: 40px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 250px;">Transponderverleihsystem</p>
         </div>
 
-      <div class="loginbody">
-        <form class="form-signin">
+        <form class = "form-anmelden">
           <h1 class="h3 mb-3 mt-5 font-weight-light" style="text-align: left;">Mit der CampusID anmelden</h1>
+
+          <hr>
+
           <div class="row">
-            <div class="col-3">
-              <p>Benutzername *</p>
+            <div class="col">
+              <p>Benutzername</p>
             </div>
             <div class="col-9">
               <input type="text" name="inputName" class="form-control" required autofocus>
@@ -35,28 +38,23 @@ include 'anmelden.php';
           </div>
 
           <div class="row">
-            <div class="col-3">
-              <p>Passwort *</p>
+            <div class="col">
+              <p>Passwort</p>
             </div>
             <div class="col-9">
               <input type="password" name="inputPassword" class="form-control" required>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col">
-              <p style="font-style: italic">*erforderlich</p>
-            </div>
-          </div>
+          <hr>
 
           <div class="row">
-            <div style="padding-left: 520px">
+            <div style="margin-left: 520px">
               <button class="btn btn-primary" type="submit">Anmelden</button>
             </div>
           </div>
 
         </form>
     </div>
-  </div>
   </body>
 </html>
