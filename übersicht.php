@@ -8,13 +8,15 @@
     <div class="col-7"></div>
     <div class="col-3" style="padding-top:10px"><p style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; ">Angemeldet als Bolle Berg | 27.06.2020 10:00</p></div>
 </div>
-<div class="row">
+<div class="row" style="border-bottom: 1px solid black">
     <p style="font-size: 35px; font-family: Arial, Helvetica, sans-serif; padding-left:50px; padding-top:5px"> Raum/Transponderübersicht </p>
 </div>
-<hr>
+
+
+
 
     <div class="container" >
-<table class="table" style="margin-top:300px">
+<table class="table" style="margin-top:50px">
     <thead class="thead-light">
       <tr>
         <th scope="col">Status</th>
@@ -47,5 +49,6 @@
   </table>
 
 </div>
+?>
   <body>
   </html>
