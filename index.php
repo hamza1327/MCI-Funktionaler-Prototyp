@@ -20,7 +20,7 @@ include 'anmelden.php';
       </div>
 
         <div class="row" style="background-color: #82187C;" >
-          <p style="font-size: 40px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 250px;">Transponderverleihsystem</p>
+          <p style="font-size: 40px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 250px; padding-top: 10px;">Transponderverleihsystem</p>
         </div>
 
         <form class = "form-anmelden">
@@ -33,7 +33,7 @@ include 'anmelden.php';
               <p>Benutzername</p>
             </div>
             <div class="col-9">
-              <input type="text" name="inputName" class="form-control" required autofocus>
+              <input type="text" name="inputName" class="form-control" placeholder="stachsim" required autofocus>
             </div>
           </div>
 
@@ -42,7 +42,7 @@ include 'anmelden.php';
               <p>Passwort</p>
             </div>
             <div class="col-9">
-              <input type="password" name="inputPassword" class="form-control" required>
+              <input type="password" name="inputPassword" class="form-control" placeholder="123" required>
             </div>
           </div>
 
