@@ -10,9 +10,6 @@
   <body>
   <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #82187c;">
       <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: white;" href="link zum HM">zurück zum Hauptmenü</a>
-          </div>
           <ul class="nav navbar-nav navbar-right">
               <h4 class="navbar-text" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: white; padding-top: 2mm">***user name | time***</h4>
           </ul>
