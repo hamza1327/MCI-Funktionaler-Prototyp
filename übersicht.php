@@ -13,10 +13,35 @@
 </div>
 
 
+<?php
+if (isset($_GET['search'])) {
+    $id = $_GET['search'];
+    tabelleFuellen($id);
+}
+ ?>
 
 
     <div class="container" >
-<table class="table" style="margin-top:50px">
+
+<br>
+
+      <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+              <form name="form" action="" method="push">
+                  <input type="text" class="form-control" name="search" style="margin-left:20px">
+              </form>
+          </div>
+          <div class="col">
+              <button class="btn btn-primary" onclick="getText()">Suchen</button>
+          </div>
+          <div class="col-3"></div>
+      </div>
+
+<br>
+
+
+<table class="table">
     <thead class="thead-light">
       <tr>
         <th scope="col">Status</th>
@@ -29,11 +54,18 @@
     <tbody>
 
       <?php
+      function getid($id, $search){
+        return $id == $search;
+
+      }
+      tabelleFuellen("alle");
+      function tabelleFuellen($id){
+        if($id = "alle"){
       $cars = array (
         array("rot","T001","10.03.2020","13.03.2020", "2.120"),
-        array("rot","T001","10.03.2020","14.03.2020", "2.120"),
-        array("rot","T001","10.03.2020","15.03.2020", "2.120"),
-        array("rot","T001","10.03.2020","16.03.2020", "2.120")
+        array("rot","T002","10.03.2020","14.03.2020", "2.120"),
+        array("rot","T003","10.03.2020","15.03.2020", "2.120"),
+        array("rot","T004","10.03.2020","16.03.2020", "2.120")
       );
       for($i = 0; $i < count($cars); $i++){
        ?>
@@ -44,11 +76,30 @@
         <td><?php echo $cars[$i][3]; ?></td>
         <td><?php echo $cars[$i][4]; ?></td>
       </tr>
-    <?php } ?>
+    <?php }} else{
+      $ergebnis = array(array());
+      for($i = 0; $i < count($cars); $i++){
+        if($cars[$i][1] == $id|| $cars[$i][4] == $id){
+          array_push($ergebnis[0], ($cars[$i][0]));
+          array_push($ergebnis[1], ($cars[$i][1]));
+          array_push($ergebnis[2], ($cars[$i][2]));
+          array_push($ergebnis[3], ($cars[$i][3]));
+          array_push($ergebnis[4], ($cars[$i][4]));
+        }
+      }
+      for($i = 0; $i < count($ergebnis); $i++){
+       ?>
+      <tr>
+        <td><?php echo $ergebnis[$i][0]; ?></td>
+        <td><?php echo $ergebnis[$i][1]; ?></td>
+        <td><?php echo $ergebnis[$i][2]; ?></td>
+        <td><?php echo $ergebnis[$i][3]; ?></td>
+        <td><?php echo $ergebnis[$i][4]; ?></td>
+      </tr>
+    <?php }}} ?>
     </tbody>
   </table>
 
 </div>
-?>
   <body>
   </html>
