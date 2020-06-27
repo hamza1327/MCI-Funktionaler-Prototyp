@@ -8,31 +8,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="css/hilfe.css" rel="stylesheet">
 </head>
+
   <body>
+
       <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #82187c;">
           <div class="container-fluid">
-              <div class="navbar-header">
-                  <a class="navbar-text" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white;" href="link zum HM">zurück zum Hauptmenü</a>
-                  <div class="navbar-text" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; padding-left: 680px;">Angemeldet als Bolle Berg | 27.06.2020 10:00</div>
+              <div class="navbar-header navbar-right">
+                  <p class="navbar-text "  style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white;">Angemeldet als Bolle Berg | 27.06.2020 10:00</p>
               </div>
           </div>
           <div class="container-fluid" style="background-color: white;">
-              <h6 class="text-left" style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: black; padding-left: 15px">Transponder / Raum Übersicht</h6>
+              <h6 class="text-left" style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: black; padding-left: 15px">Hauptmenü</h6>
           </div>
       </nav>
 
 
-    /<div class="container-fluid" style= "margin-top: 120px">
+    <div class="container-fluid" style= "margin-top: 110px">
 
-      <div class="row" style="height: 500px">
-          <div class="col-sm-2 col text-center" style="background-color:yellow; border-right: 1px solid black; height: 500px">
+      <div class="row">
+          <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
               <h4 style=""> Überschrift </h4>
+            <div>
+              <button class="btn btn-primary" type="submit">Anmelden</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit">Anmelden</button>
+            </div>
           </div>
-          <div class="col-sm-2 text-center" style="background-color:pink; border-right: 1px solid black; height: 500px">
+          <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
               <h4 style=""> Überschrift </h4>
+              <button class="btn btn-primary" type="submit">Anmelden</button>
           </div>
-          <div class="col-sm-2 text-center" style="background-color:pink; border-right: 1px solid black; height: 500px">
+          <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
               <h4 style=""> Überschrift </h4>
+              <button class="btn btn-primary" type="submit">Anmelden</button>
           </div>
       </div>
 
@@ -73,15 +82,22 @@
 <!--          </div>-->
 <!---->
 <!--        </form>-->
-    </div>
 
-      <footer class="container-fluid"  style=" background-color: white;
-              color: black; border-top: 1px solid #000000;  ">
-          <div id="box1">
-            <p style=" color: white";> ?</p>
+
+    </div>
+          <footer class="container-fluid "  style=" background-color: white;
+                  border-top: 1px solid #000000;">
+          <div class="col-1 text-right">
+              <div id="box1">
+                  <p style=" color: white"> ?</p>
+              </div>
           </div>
-          <p>Impressum | Datenschutz</p>
-      </footer>
+         <div class="col-1 text-left">
+              <div style="">
+                  <p>Impressum | Datenschutz</p>
+              </div>
+         </div>
+          </footer>
 
 
   </body>
