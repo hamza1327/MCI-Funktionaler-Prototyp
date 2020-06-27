@@ -23,12 +23,12 @@
               <form name="form" action="" method="push">
                   <input type="text" class="form-control" name="search" style="margin-left:20px">
           </div>
-          </form>
-          <form>
           <div class="col-2">
               <button class="btn btn-primary" type="submit">Suchen</button>
           </div>
+          </form>
           </div>
+          <form>
 
           <div class="row">
           <div class = "col-4"></div>
@@ -114,12 +114,19 @@
           <td><?php echo $cars[$i][3]; ?></td>
           <td><?php echo $cars[$i][4]; ?></td>
         </tr>
-        <?php  }}} ?>
-
+      <?php  }}else{ ?>
+        <tr>
+        <td><?php echo $cars[$i][0]; ?></td>
+        <td><?php echo $cars[$i][1]; ?></td>
+        <td><?php echo $cars[$i][2]; ?></td>
+        <td><?php echo $cars[$i][3]; ?></td>
+        <td><?php echo $cars[$i][4]; ?></td>
+      </tr>
+      <?php }} ?>
     </tbody>
   </table>
-
 </div>
+
 <hr style="width: 100%; bottom: 43; position: fixed;">
 <p style="bottom: 5; left: 20; position: fixed;">Impressum | Datenschutz</p>
 <img src="assets/frage.png" alt="" width="50px" height="50px" style="right: 41; bottom: 36; position: fixed;">
