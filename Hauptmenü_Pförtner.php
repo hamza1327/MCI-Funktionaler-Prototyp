@@ -3,27 +3,42 @@
 <head>
     <!-- CSS -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/anmelden.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="css/hilfe.css" rel="stylesheet">
 </head>
   <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #82187c;">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: white;" href="link zum HM">zurück zum Hauptmenü</a>
+      <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #82187c;">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-text" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white;" href="link zum HM">zurück zum Hauptmenü</a>
+                  <div class="navbar-text" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; padding-left: 680px;">Angemeldet als Bolle Berg | 27.06.2020 10:00</div>
+              </div>
           </div>
-          <ul class="nav navbar-nav navbar-right">
-              <h4 class="navbar-text" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: white; padding-top: 2mm">***user name | time***</h4>
-          </ul>
-      </div>
-      <div class="container-fluid" style="background-color: white;">
-          <h6 class="text-left" style="font-size: 25px; font-family: Arial, Helvetica, sans-serif; color: black;">Transponder / Raum Übersicht</h6>
-      </div>
-  </nav>
+          <div class="container-fluid" style="background-color: white;">
+              <h6 class="text-left" style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: black; padding-left: 15px">Transponder / Raum Übersicht</h6>
+          </div>
+      </nav>
 
 
- /<div class="container-fluid" style="height: 500px">
+    /<div class="container-fluid" style= "margin-top: 120px">
+
+      <div class="row" style="height: 500px">
+          <div class="col-sm-2 col text-center" style="background-color:yellow; border-right: 1px solid black; height: 500px">
+              <h4 style=""> Überschrift </h4>
+          </div>
+          <div class="col-sm-2 text-center" style="background-color:pink; border-right: 1px solid black; height: 500px">
+              <h4 style=""> Überschrift </h4>
+          </div>
+          <div class="col-sm-2 text-center" style="background-color:pink; border-right: 1px solid black; height: 500px">
+              <h4 style=""> Überschrift </h4>
+          </div>
+      </div>
+
+
+
+
 <!--        </div>-->
 <!---->
 <!--        <form class = "form-anmelden">-->
@@ -63,9 +78,11 @@
       <footer class="container-fluid"  style=" background-color: white;
               color: black; border-top: 1px solid #000000;  ">
           <div id="box1">
-          <p style=" color: white";> ?</p>
+            <p style=" color: white";> ?</p>
           </div>
           <p>Impressum | Datenschutz</p>
       </footer>
+
+
   </body>
 </html>
