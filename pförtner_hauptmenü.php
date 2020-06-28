@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="css/hilfe.css" rel="stylesheet">
 </head>
-
   <body>
-
       <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #82187c;">
           <div class="container-fluid">
               <div class="navbar-header navbar-right">
@@ -82,21 +80,19 @@
 <!--          </div>-->
 <!---->
 <!--        </form>-->
-
-
     </div>
           <footer class="container-fluid "  style=" background-color: white;
                   border-top: 1px solid #000000;">
-          <div class="col-1 text-right">
-              <div id="box1">
-                  <p style=" color: white"> ?</p>
+              <div class="col-1 text-right">
+                  <div id="box1">
+                      <p style=" color: white"> ?</p>
+                  </div>
               </div>
-          </div>
-         <div class="col-1 text-left">
-              <div style="">
-                  <p>Impressum | Datenschutz</p>
-              </div>
-         </div>
+             <div class="col-1 text-left">
+                  <div style="">
+                      <p>Impressum | Datenschutz</p>
+                  </div>
+             </div>
           </footer>
 
 
