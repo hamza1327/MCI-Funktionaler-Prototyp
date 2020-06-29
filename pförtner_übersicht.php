@@ -127,9 +127,9 @@
   </table>
 </div>
 
-<hr style="width: 100%; bottom: 43; position: fixed;">
+<hr style="width: 100%; bottom: 43; position: fixed; border-top: 1px solid #000000">
 <p style="bottom: 5; left: 20; position: fixed;">Impressum | Datenschutz</p>
 <img src="assets/frage.png" alt="" width="50px" height="50px" style="right: 41; bottom: 36; position: fixed;">
 
 </body>
-  </html>
+</html>

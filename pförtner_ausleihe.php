@@ -42,30 +42,31 @@
         </div>
     </div>
 </form>
-      
+
 <hr style="width: 100%; bottom: 43; position: fixed;">
 <p style="bottom: 5; left: 20; position: fixed;">Impressum | Datenschutz</p>
 <img src="assets/frage.png" alt="" width="50px" height="50px" style="right: 41; bottom: 36; position: fixed;">
 
+<?php
+  $mnrArray = array('111465','1113456','1113122');
+  $tnrArray = array('T001','T002','T003');
+
+  if((isset($_GET['mnr'])) && (isset($_GET['tnr']))){
+      $mnr = $_GET['mnr'];
+      $tnr= $_GET['tnr'];
+      $found = 0;
+      $i = 0;
+      while($i<count($mnrArray) && $found == 0){
+          if(($mnr == $mnrArray[$i]) && ($tnr == $tnrArray[$i])){ $found = 1; ?>
+              <script> document.getElementById("aButton").disabled = false; </script>
+              <?php
+          } else{ $i++;
+              ?>
+              <script> document.getElementById("aButton").disabled = true; </script>
+              <?php } } }else{ ?>
+              <script> document.getElementById("aButton").disabled = true; </script>
+              <?php } ?>
+
 
 </body>
   </html>
-  <?php
-    $mnrArray = array('111465','1113456','1113122');
-    $tnrArray = array('T001','T002','T003');
-
-    if(isset($_GET['mnr']) && isset($_GET['tnr'])){
-        $mnr = $_GET['mnr'];
-        $tnr= $_GET['tnr'];
-        $found = 0;
-        $i = 0;
-        while($i<count($mnrArray) && $found = 0){
-            if($mnr == $mnrArray[$i]){ $found = 1; ?>
-                <script> document.getElementById("aButton").enabled = true; </script> 
-                <?php
-            } else{ $i++;
-                ?>
-                <script> document.getElementById("aButton").enabled = false; </script>
-                <?php } } }else{ ?> 
-                <script> document.getElementById("aButton").enabled = false; </script>
-                <?php } ?>
