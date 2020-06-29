@@ -10,10 +10,12 @@
             if( pname == 'Ja')
             {
                 document.getElementById("aButton").disabled = false;
+                document.getElementById("uButton").disabled = false;
                 // window.alert('Ja');
             }
             else {
                 document.getElementById("aButton").disabled = true;
+                document.getElementById("uButton").disabled = true;
                 // window.alert('Nein');
             }
         }
@@ -66,6 +68,7 @@
                             if( $found == 0 )
                             {?>
                                 <img src='assets/rot.png' alt='' height='20px' width='20px' title='Nein' id='Nein' onLoad = "disButton('Nein');">
+
                             <?php  }?>
                         </div>
                 </div>
@@ -80,12 +83,21 @@
                     <div class = "col-2"></div>
                 </div>
                 <div class ="row" style="margin-top: 30px">
-                    <div class = "col-4"><button class ="btn btn-primary" type="submit">Berechtigung prüfen</button></div>
-                    <div class = "col-4"><button class ="btn btn-primary" id="aButton" >Ausleihe durchführen</button></div>
+                    <div class = "col-4"><button class ="btn btn-primary" type="submit" id="pButton">Berechtigung prüfen</button></div>
+                    <div class = "col-4">
+                        <button class ="btn btn-primary" id="aButton" >Ausleihe durchführen</button>
+
+                    </div>
                 </div>
             </div>
+            <div class="col-4 ">
+                    <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="550px" height="280px" >
+            </div>
 
-            <div class="col-6"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="550px" height="280px"></div>
+            <!--                Hier muss laut Aufgabe ein Button sein  -->
+            <div class="container" style="margin-left: 800px">
+                <button class ="btn btn-primary" id="uButton" >Unterschrift</button>
+            </div>
         </div>
     </div>
 </form>
@@ -96,4 +108,4 @@
 
 
 </body>
-  </html>
+</html>
