@@ -21,7 +21,6 @@
             <hr style="width: 100%; border-top: 1px solid #000000;">
             <div>
                 <button class="btn btn-primary" type="submit" style="width: 130px; height: 30px;"><a href ="pförtner_übersicht.php">Übersicht anzeigen</a></button></div>
-            </div>
         </div>
         <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
             <h4 style="margin-top: 20px"> Transponder Ausleihe </h4>
@@ -33,7 +32,7 @@
             <div style= "margin-top: 10px">
                 <button class="btn btn-primary custom-button" type="submit"
                         style="width: 130px; height: 30px" value="true">Erhalten</button>
-            </div><a href ="pförtner_übersicht.php">Übersicht anzeigen</a>
+            </div>
         </div>
         <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
             <h4 style="margin-top: 20px"> Offline Modus </h4>
@@ -44,7 +43,7 @@
             </div>
             <div style= "margin-top: 10px">
                 <button class="btn btn-primary custom-button" type="submit"
-                        style="width: 130px; height: 30px" value="true" >Beenden</button>
+                        style="width: 130px; height: 30px" value="true">Beenden</button>
             </div>
         </div>
     </div>
