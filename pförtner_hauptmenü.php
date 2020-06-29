@@ -16,11 +16,13 @@
 </div>
 <div class="container-fluid">
     <div class="row">
+
         <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
             <h4 style="margin-top: 20px"> Raum / Transponder </h4>
             <hr style="width: 100%; border-top: 1px solid #000000;">
             <div>
-                <button class="btn btn-primary" type="submit" style="width: 130px; height: 30px;"><a href ="pförtner_übersicht.php">Übersicht anzeigen</a></button></div>
+                    <button class="btn btn-primary" type="submit" style="width: 130px; height: 30px;"><a href ="pförtner_übersicht.php">Übersicht anzeigen</a></button>
+            </div>
         </div>
         <div class="col-sm-2 text-center" style=" border-right: 1px solid black; height: 540px">
             <h4 style="margin-top: 20px"> Transponder Ausleihe </h4>
