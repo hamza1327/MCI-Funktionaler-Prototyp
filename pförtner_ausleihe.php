@@ -9,10 +9,10 @@
     </script>
 
     <script>
-        // $( document ).ready(function()
-        // {
-        //     uButton( 'true' );
-        // });
+        $( document ).ready(function()
+        {
+            uButton( 'true' );
+        });
 
         function groupAktion( pname )
         {
@@ -27,8 +27,6 @@
                 document.getElementById("uButton").hidden = true;
             }
         }
-
-
 
         function uButton( pname )
         {
