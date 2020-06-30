@@ -5,6 +5,8 @@
 </head>
 
 <body>
+
+
     <div class="row" style="background-color: #82187C">
     <div class="col-2" style="padding-top:10px; padding-bottom:10px"><a href="pförtner_hauptmenü.php"  style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 15px">Zurück zum Hauptmenü</a></div>
     <div class="col-7"></div>
@@ -14,8 +16,7 @@
     <p style="font-size: 35px; font-family: Arial, Helvetica, sans-serif; padding-left:50px; padding-top:5px"> Raum/Transponderübersicht </p>
 </div>
 
-
-    <div class="container" >
+<div class="container" >
 <br>
       <div class="row">
           <div class="col-2"></div>
@@ -43,88 +44,56 @@
           </div>
 
 <br>
+<?php
+if(isset($_GET['filterAll'])){
+  tabelleFuellen(getUebersicht());
+}
+if(isset($_GET['frei'])){
+  tabelleFuellen(getFrei());
+}
+if(isset($_GET['verliehen'])){
+  tabelleFuellen(getVerliehen());
+}
+if(isset($_GET['überfällig'])){
+  tabelleFuellen(getUeberfaellig());
+}
+if(isset($_GET['search'])){
+  $search = $_GET['search'];
+  tabelleFuellen(getSearch($search));
+}
+
+ ?>
+
+<?php
+function tabelleFuellen(object $query){?>
 
 <table class="table">
     <thead class="thead-light">
       <tr>
         <th scope="col">Status</th>
-        <th scope="col">Transponder</th>
+        <th scope="col">Transponder Nr.</th>
+        <th scope="col">Raum Nr.</th>
         <th scope="col">Von</th>
         <th scope="col">Bis</th>
-        <th scope="col">Raum</th>
       </tr>
     </thead>
     <tbody>
-
       <?php
-      $cars = array (
-        array("<img src='assets/rot.png' alt='' height='20px' width='20px' title='Überfällig'>","T001","10.03.2020","13.03.2020", "C120"),
-        array("<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>","T002","10.03.2020","14.03.2020", "A120"),
-        array("<img src='assets/gelb.png' alt='' height='20px' width='20px' title='Verliehen'>","T003","10.03.2020","15.03.2020", "C130"),
-        array("<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>","T004","10.03.2020","16.03.2020", "C120")
-      );
 
-      for($i = 0; $i < count($cars); $i++){
-        if(isset($_GET['search'])){
-          $id = $_GET['search'];
-          if($id == $cars[$i][1] || $id == $cars[$i][4]){
 
-       ?>
+      while ($data = mysqli_fetch_array($query)) { ?>
+
       <tr>
-        <td><?php echo $cars[$i][0]; ?></td>
-        <td><?php echo $cars[$i][1]; ?></td>
-        <td><?php echo $cars[$i][2]; ?></td>
-        <td><?php echo $cars[$i][3]; ?></td>
-        <td><?php echo $cars[$i][4]; ?></td>
+        <td><?php echo $data['status'] ?></td>
+        <td><?php echo $data['tnr'] ?></td>
+        <td><?php echo $data['rnr'] ?></td>
+        <td><?php echo $data['von'] ?></td>
+        <td><?php echo $data['bis'] ?></td>
       </tr>
-    <?php } else continue;
-    } else if(isset($_GET['filterAll']))
-    {?>
-      <tr>
-        <td><?php echo $cars[$i][0]; ?></td>
-        <td><?php echo $cars[$i][1]; ?></td>
-        <td><?php echo $cars[$i][2]; ?></td>
-        <td><?php echo $cars[$i][3]; ?></td>
-        <td><?php echo $cars[$i][4]; ?></td>
-      </tr>
-    <?php }else if(isset($_GET['frei'])){
-      if($cars[$i][0] == "<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>"){?>
-        <tr>
-        <td><?php echo $cars[$i][0]; ?></td>
-        <td><?php echo $cars[$i][1]; ?></td>
-        <td><?php echo $cars[$i][2]; ?></td>
-        <td><?php echo $cars[$i][3]; ?></td>
-        <td><?php echo $cars[$i][4]; ?></td>
-      </tr>
-     <?php }}else if(isset($_GET['verliehen'])){
-       if($cars[$i][0] == "<img src='assets/gelb.png' alt='' height='20px' width='20px' title='Verliehen'>"){?>
-        <tr>
-        <td><?php echo $cars[$i][0]; ?></td>
-        <td><?php echo $cars[$i][1]; ?></td>
-        <td><?php echo $cars[$i][2]; ?></td>
-        <td><?php echo $cars[$i][3]; ?></td>
-        <td><?php echo $cars[$i][4]; ?></td>
-      </tr>
-      <?php }} else if(isset($_GET['überfällig'])){
-        if($cars[$i][0] == "<img src='assets/rot.png' alt='' height='20px' width='20px' title='Überfällig'>"){?>
-          <tr>
-          <td><?php echo $cars[$i][0]; ?></td>
-          <td><?php echo $cars[$i][1]; ?></td>
-          <td><?php echo $cars[$i][2]; ?></td>
-          <td><?php echo $cars[$i][3]; ?></td>
-          <td><?php echo $cars[$i][4]; ?></td>
-        </tr>
-      <?php  }}else{ ?>
-        <tr>
-        <td><?php echo $cars[$i][0]; ?></td>
-        <td><?php echo $cars[$i][1]; ?></td>
-        <td><?php echo $cars[$i][2]; ?></td>
-        <td><?php echo $cars[$i][3]; ?></td>
-        <td><?php echo $cars[$i][4]; ?></td>
-      </tr>
-      <?php }} ?>
+    <?php } ?>
     </tbody>
   </table>
+<?php } ?>
 </div>
 
 <hr style="width: 100%; bottom: 43; position: fixed; border-top: 1px solid #000000">
@@ -132,4 +101,53 @@
 <img src="assets/frage.png" alt="" width="50px" height="50px" style="right: 41; bottom: 36; position: fixed;">
 
 </body>
+
+
+<?php
+function getConnection()
+{
+    $mysqlhost = "localhost";
+    $mysqluser = "root";
+    $mysqlpwd = "";
+    $mysqldb = "mci";
+    $connection = mysqli_connect($mysqlhost, $mysqluser, $mysqlpwd, $mysqldb) or die("DB Error");
+    return $connection;
+}
+
+function getSearch(String $search){
+  $con = getConnection();
+  $sql = "SELECT * FROM uebersicht WHERE tnr = '$search' OR rnr = '$search' ";
+  $results =  mysqli_query($con, $sql) or die($con->error);
+  return $results;
+}
+
+function getUebersicht(){
+  $con = getConnection();
+  $sql = "SELECT * FROM uebersicht";
+  $results =  mysqli_query($con, $sql) or die($con->error);
+  return $results;
+}
+
+function getFrei(){
+  $con = getConnection();
+  $sql = "SELECT * FROM uebersicht WHERE status = '<img src=\'assets/grün.png\' alt=\'\' height=\'20px\' width=\'20px\' title=\'Verfügbar\'>'";
+  $results =  mysqli_query($con, $sql) or die($con->error);
+  return $results;
+}
+
+function getVerliehen(){
+  $con = getConnection();
+  $sql = "SELECT * FROM uebersicht WHERE status = '<img src=\'assets/gelb.png\' alt=\'\' height=\'20px\' width=\'20px\' title=\'Verliehen\'>' ";
+  $results =  mysqli_query($con, $sql) or die($con->error);
+  return $results;
+}
+
+function getUeberfaellig(){
+  $con = getConnection();
+  $sql = "SELECT * FROM uebersicht WHERE status = '<img src=\'assets/rot.png\' alt=\'\' height=\'20px\' width=\'20px\' title=\'Überfällig\'>'";
+  $results =  mysqli_query($con, $sql) or die($con->error);
+  return $results;
+}
+?>
+
 </html>
