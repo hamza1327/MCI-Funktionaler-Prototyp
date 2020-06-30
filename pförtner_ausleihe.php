@@ -41,16 +41,16 @@
                 </form>
                 <div class="row">
                     <div class = "col-4"><button class ="btn btn-primary" id="aButton" disabled onclick="feedback()" data-toggle="modal" data-target="#myModal">Ausleihe durchführen</button></div>
-                </div>    
+                </div>
 
             </div>
-            
+
             <div class="col-6"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="550px" height="280px" id="uFeld" style="opacity: 0.2" disabled>
 
             <script>
             function unterschreiben(){
                 document.getElementById("uFeld").src = 'assets/unterschriftsfeld_schrift.png';
-                document.getElementById("aButton").disabled = false; 
+                document.getElementById("aButton").disabled = false;
             }
 
             </script>
@@ -84,7 +84,7 @@
         </div>
       </div>
       </div>
-  </div>  
+  </div>
 </div>
 
 
@@ -101,7 +101,7 @@
       $i = 0;
       while($i<count($mnrArray) && $found == 0){
           if(($mnr == $mnrArray[$i]) && ($tnr == $tnrArray[$i])){ $found = 1; ?>
-              <script> 
+              <script>
               document.getElementById("farbe").hidden = false;
               document.getElementById("uFeld").style.opacity = "1";
               document.getElementById("uButton").disabled = false;
@@ -109,17 +109,11 @@
               <?php
           } else{ $i++;
               ?>
-              <script> document.getElementById("aButton").disabled = true; 
+              <script> document.getElementById("aButton").disabled = true;
                        document.getElementById("farbe").src = 'assets/rot.png';
                        document.getElementById("farbe").hidden = false;
-                       
+
               </script>
               <?php } } }else{ ?>
               <script> document.getElementById("aButton").disabled = true; </script>
               <?php } ?>
-
-<script> 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-</script>
