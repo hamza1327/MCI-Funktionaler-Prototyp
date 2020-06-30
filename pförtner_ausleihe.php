@@ -1,26 +1,41 @@
 <html>
 <head>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/hilfe.css" rel="stylesheet">
-
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/hilfe.css" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
 
     <script>
-        function disButton( pname )
+        // $( document ).ready(function()
+        // {
+        //     uButton( 'true' );
+        // });
+
+        function groupAktion( pname )
         {
             if( pname == 'Ja')
             {
                 document.getElementById("aButton").disabled = false;
-                document.getElementById("uButton").disabled = false;
-                // window.alert('Ja');
+                document.getElementById("uButton").hidden = false;
+                document.getElementById("uBox").style.borderColor = "black";
             }
             else {
                 document.getElementById("aButton").disabled = true;
-                document.getElementById("uButton").disabled = true;
-                // window.alert('Nein');
+                document.getElementById("uButton").hidden = true;
             }
         }
-    </script>
 
+
+
+        function uButton( pname )
+        {
+            document.getElementById("unterschrift").hidden = pname;
+            window.alert('Unterschrift')
+        }
+    </script>
 </head>
 
 <body>
@@ -59,7 +74,7 @@
                                     if(($mnr == $mnrArray[$i]) && ($tnr == $tnrArray[$i]))
                                     {
                                         $found = 1; ?>
-                                        <img src='assets/grün.png' height='20px' width='20px' title='Ja' id='Ja' onLoad = "disButton('Ja');">
+                                        <img src='assets/grün.png' height='20px' width='20px' title='Ja' id='Ja' onLoad = "groupAktion('Ja');">
                                     <?php
                                     }
                                     $i++;
@@ -67,11 +82,11 @@
                             }
                             if( $found == 0 )
                             {?>
-                                <img src='assets/rot.png' alt='' height='20px' width='20px' title='Nein' id='Nein' onLoad = "disButton('Nein');">
-
+                                <img src='assets/rot.png' alt='' height='20px' width='20px' title='Nein' id='Nein' onLoad = "groupAktion('Nein');">
                             <?php  }?>
                         </div>
                 </div>
+
                 <div class ="row">
                     <div class = "col-4"><p> Matrikelnummer</p></div>
                     <div class = "col"><input type = "text" class="form-control" name="mnr" id="mnr"></div>
@@ -86,18 +101,18 @@
                     <div class = "col-4"><button class ="btn btn-primary" type="submit" id="pButton">Berechtigung prüfen</button></div>
                     <div class = "col-4">
                         <button class ="btn btn-primary" id="aButton" >Ausleihe durchführen</button>
-
                     </div>
                 </div>
             </div>
-            <div class="col-4 ">
-                    <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="550px" height="280px" >
-            </div>
-
+                <div class="col-5">
+                    <div class="card" id="uBox" style="width:400px; height: 200px;">
+                        <img class="card-img" src="assets/U_2.JPG" id="unterschrift" width="200px" height="150px">
+                    </div>
+                </div>
             <!--                Hier muss laut Aufgabe ein Button sein  -->
-            <div class="container" style="margin-left: 800px">
-                <button class ="btn btn-primary" id="uButton" >Unterschrift</button>
-            </div>
+                <div class="row" style="margin-left: 720px; margin-top: 20px">
+                    <button type="button" class ="btn btn-secondary"  id="uButton" onclick="uButton('false')">Unterschrift generieren</button>
+                </div>
         </div>
     </div>
 </form>
