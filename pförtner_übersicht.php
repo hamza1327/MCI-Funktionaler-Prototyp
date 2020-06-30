@@ -49,19 +49,17 @@
 <?php
 if(isset($_GET['filterAll'])){
   tabelleFuellen(getUebersicht());
-}
-if(isset($_GET['frei'])){
+}else if(isset($_GET['frei'])){
   tabelleFuellen(getFrei());
-}
-if(isset($_GET['verliehen'])){
+}else if(isset($_GET['verliehen'])){
   tabelleFuellen(getVerliehen());
-}
-if(isset($_GET['überfällig'])){
+}else if(isset($_GET['überfällig'])){
   tabelleFuellen(getUeberfaellig());
-}
-if(isset($_GET['search'])){
+}else if(isset($_GET['search'])){
   $search = $_GET['search'];
   tabelleFuellen(getSearch($search));
+}else{
+tabelleFuellen(getUebersicht());
 }
 
  ?>
