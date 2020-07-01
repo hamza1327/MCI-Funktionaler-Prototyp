@@ -117,7 +117,7 @@
             </div>
             <div class="col-5">
                 <div class="card" id="uBox" style="width:400px; height: 200px;">
-                    <img class="card-img" src="assets/U_2.JPG" id="unterschrift" width="200px" height="150px">
+                    <img class="card-img" src="assets/Unterschrift.JPG" id="unterschrift" width="200px" height="150px">
                 </div>
             </div>
             <!--                Hier muss laut Aufgabe ein Button sein  -->
