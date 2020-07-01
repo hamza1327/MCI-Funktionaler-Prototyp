@@ -1,9 +1,7 @@
 <html>
 
-
 <head>
   <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/hilfe.css" rel="stylesheet">
 </head>
 
 <body>
