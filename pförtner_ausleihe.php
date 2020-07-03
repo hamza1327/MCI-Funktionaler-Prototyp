@@ -48,13 +48,13 @@
                 <div class="row">
                     <div class = "col-4">
                     </div>
-
                 </div>
-
             </div>
+            <div class="col-6"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="opacity: 0.2" disabled>
+                    <button class="btn btn-primary" style="margin-left:260px; margin-top:10px" id="uButton" onclick="unterschreiben()" disabled> Unterschreiben</button>
         </div>
 
-        <div class="col-6"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="opacity: 0.2" disabled>
+        
 
             <script>
                 function unterschreiben(){
@@ -62,7 +62,7 @@
                     document.getElementById("aButton").disabled = false;
                 }
             </script>
-            <button class="btn btn-primary" style="margin-left:260px; margin-top:10px" id="uButton" onclick="unterschreiben()" disabled> Unterschreiben</button>
+
         </div>
         <div class="container">
   <div class="modal fade" id="myModal" role="dialog" style="padding-top:250px">
