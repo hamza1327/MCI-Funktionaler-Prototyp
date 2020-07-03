@@ -32,10 +32,10 @@
         )
 
         let cars = [
-            ["<img src='assets/rot.png' alt='' height='20px' width='20px' title='Überfällig'>","T001","10.03.2020","13.03.2020", "C120"],
-            ["<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>","T002","10.03.2020","14.03.2020", "A120"],
-            ["<img src='assets/gelb.png' alt='' height='20px' width='20px' title='Verliehen'>","T003","10.03.2020","15.03.2020", "C130"],
-            ["<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>","T004","10.03.2020","16.03.2020", "C120"],
+            ["<img src='assets/rot.png' alt='' height='20px' width='20px' title='Überfällig'>","T001","10:00","13:00", "C120"],
+            ["<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>","T002","11:00","12:00", "A120"],
+            ["<img src='assets/gelb.png' alt='' height='20px' width='20px' title='Verliehen'>","T003","14:00","16:00", "C130"],
+            ["<img src='assets/rot.png' alt='' height='20px' width='20px' title='Überfällig'>","T004","15:00","18:00", "C120"],
         ];
 
 
@@ -71,7 +71,28 @@
             fun_delete();
             for (var j = 0; j < cars[0].length; j++)
             {
+              if(cars[j][0]=="<img src='assets/grün.png' alt='' height='20px' width='20px' title='Verfügbar'>"){
                 $("#tableBody").append("<tr>");
+                $("#tableBody").append(
+                    "<td scope=\"col\">" + cars[j][0] + "</td>" +
+                    "<td scope=\"col\">" + cars[j][1] + "</td>" +
+                    "<td scope=\"col\">" + "-" + "</td>" +
+                    "<td scope=\"col\">" + "-" + "</td>" +
+                    "<td scope=\"col\">" + cars[j][4] + "</td>");
+                $("#tableBody").append("</tr>");
+            }
+            else if(cars[j][0]=="<img src='assets/rot.png' alt='' height='20px' width='20px' title='Überfällig'>"){
+              $("#tableBody").append("<tr>");
+                $("#tableBody").append(
+                    "<td scope=\"col\">" + cars[j][0] + "</td>" +
+                    "<td scope=\"col\">" + cars[j][1] + "</td>" +
+                    "<td scope=\"col\">" + cars[j][2] + "</td>" +
+                    "<td style=\"color: red\" scope=\"col\">" + cars[j][3] + "</td>" +
+                    "<td scope=\"col\">" + cars[j][4] + "</td>");
+                $("#tableBody").append("</tr>");
+            }
+            else{
+              $("#tableBody").append("<tr>");
                 $("#tableBody").append(
                     "<td scope=\"col\">" + cars[j][0] + "</td>" +
                     "<td scope=\"col\">" + cars[j][1] + "</td>" +
@@ -80,6 +101,7 @@
                     "<td scope=\"col\">" + cars[j][4] + "</td>");
                 $("#tableBody").append("</tr>");
             }
+          }
         }
         function fun_Frei()
         {
@@ -91,8 +113,8 @@
                     $("#tableBody").append(
                         "<td scope=\"col\">" + cars[j][0] + "</td>" +
                         "<td scope=\"col\">" + cars[j][1] + "</td>" +
-                        "<td scope=\"col\">" + cars[j][2] + "</td>" +
-                        "<td scope=\"col\">" + cars[j][3] + "</td>" +
+                        "<td scope=\"col\">" + "-" + "</td>" +
+                        "<td scope=\"col\">" + "-" + "</td>" +
                         "<td scope=\"col\">" + cars[j][4] + "</td>");
                     $("#tableBody").append("</tr>");
                 }
@@ -124,8 +146,8 @@
                         "<td scope=\"col\">" + cars[j][0] + "</td>" +
                         "<td scope=\"col\">" + cars[j][1] + "</td>" +
                         "<td scope=\"col\">" + cars[j][2] + "</td>" +
-                        "<td scope=\"col\">" + cars[j][3] + "</td>" +
-                        "<td scope=\"col\">" + cars[j][4] + "</td>");
+                        "<td style=\"color: red\" scope=\"col\">" + cars[j][3] + "</td>" +
+                        "<td  scope=\"col\">" + cars[j][4] + "</td>");
                     $("#tableBody").append("</tr>");
                 }
             }
@@ -142,7 +164,7 @@
                         "<td scope=\"col\">" + cars[j][0] + "</td>" +
                         "<td scope=\"col\">" + cars[j][1] + "</td>" +
                         "<td scope=\"col\">" + cars[j][2] + "</td>" +
-                        "<td scope=\"col\">" + cars[j][3] + "</td>" +
+                        "<td  scope=\"col\">" + cars[j][3] + "</td>" +
                         "<td scope=\"col\">" + cars[j][4] + "</td>");
                     $("#tableBody").append("</tr>");
                 }

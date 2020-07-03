@@ -1,23 +1,26 @@
 <html>
 
 <head>
-  <link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap-min.css">
   <link href="css/hilfe.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
+
     <div class="row" style="background-color: #82187C">
     <div class="col-2" style="padding-top:10px; padding-bottom:10px"><a href="pförtner_hauptmenü.php" style="font-size: 20px; margin-left: 18px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 15px">Zurück zum Hauptmenü</a></div>
     <div class="col-7"></div>
-    <div class="col-3" style="padding-top:10px;"><p style="font-size: 20px; padding-left: 100px; font-family: Arial, Helvetica, sans-serif; color: white; ">Angemeldet als Bolle Berg | 27.06.2020 10:00</p></div>
+    <div class="col-3" style="padding:15px;"><p style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; ">Angemeldet als Bolle Berg | 27.06.2020 10:00</p></div>
 </div>
 <div class="row" style="border-bottom: 1px solid black">
     <p style="font-size: 35px; font-family: Arial, Helvetica, sans-serif; padding-left:50px; padding-top:5px"> Transponder verleihen </p>
 </div>
     <div class="container" >
+    
         <div class="row" style="margin-top: 200px" >
             <div class="col-6">
                 <div class="row">
@@ -36,12 +39,14 @@
                     <div class = "col-2"></div>
                 </div>
                 <div class ="row" style="margin-top: 30px">
-                    <div class = "col-4"><button class ="btn btn-primary">Berechtigung prüfen</button></div>
+                    <div class = "col-5"><button class ="btn btn-primary">Berechtigung prüfen</button></div>
                 </div>
                 </form>
                 <div class="row">
+                    <div class = "col-4"><button class ="btn btn-primary" id="aButton" disabled data-toggle="modal" data-target="#myModal">Ausleihe durchführen</button></div>
+                </div> 
+                <div class="row">
                     <div class = "col-4">
-                        <a href="pförtner_übersicht.php?tnr=<?php echo $_GET['tnr'];?>&flag=<?php echo $_GET['v'];?>" class="button" >Hier klicken</a>
                     </div>
 
                 </div>
@@ -58,7 +63,34 @@
             <button class="btn btn-primary" style="margin-left:260px; margin-top:10px" id="uButton" onclick="unterschreiben()" disabled> Unterschreiben</button>
             </div>
         </div>
-    </div>
+        <div class="container">
+  <div class="modal fade" id="myModal" role="dialog" style="padding-top:250px">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <h4 class="modal-title" style="font-size:23px">Sind sicher das der Transponer verliehen werden soll?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-footer" >
+
+        <a href="pförtner_übersicht.php?tnr=<?php echo $_GET['tnr'];?>&flag=v" class="btn btn-primary mr-auto" onclick="ausleihen()" >Ja</a>
+
+
+
+        <button type="button" class="btn btn-primary " data-dismiss="modal">Abbrechen</button>
+
+        </div>
+        </div>
+      </div>
+      </div>
+  </div>  
+</div>
+</div>
+
+
+
+
 
 
 <hr style="width: 100%; bottom: 43; position: fixed;">
@@ -66,26 +98,7 @@
 <img src="assets/frage.png" alt="" width="50px" height="50px" style="right: 41; bottom: 36; position: fixed;">
 
 
-<div class="container">
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <h4 class="modal-title" style="font-size:23px">Ausleihe durchführen</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body" style="font-size:18px">
-        Möchten Sie die Ausleihe wirklich durchführen?
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-block" onclick="ausleihen()">Ja</button>
-        <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Abbrechen</button>
-        </div>
-      </div>
-      </div>
-  </div>
-</div>
+
 
 
 </body>
