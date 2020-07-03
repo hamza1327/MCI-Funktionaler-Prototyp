@@ -25,9 +25,9 @@
             <div class="col-6">
                 <div class="row">
                 <div class="col-4"><p> Berechtigung</p></div>
-                    <div class="col"><img src='assets/grün.png' height='20px' width='20px' id="farbe" hidden></div>
-                </div>
-                <form>
+                <div class="col"><img src='assets/grün.png' height='20px' width='20px' id="farbe" hidden></div>
+            </div>
+            <form>
                 <div class ="row">
                     <div class = "col-4"><p> Matrikelnummer</p></div>
                     <div class = "col"><input type = "text" class="form-control" name="mnr" id="mnr"></div>
@@ -50,18 +50,19 @@
                     </div>
 
                 </div>
-            </div>
 
-            <div class="col-6"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="opacity: 0.2" disabled>
+            </div>
+        </div>
+
+        <div class="col-6"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="opacity: 0.2" disabled>
 
             <script>
-            function unterschreiben(){
-                document.getElementById("uFeld").src = 'assets/unterschriftsfeld_schrift.png';
-                document.getElementById("aButton").disabled = false;
-            }
+                function unterschreiben(){
+                    document.getElementById("uFeld").src = 'assets/unterschriftsfeld_schrift.png';
+                    document.getElementById("aButton").disabled = false;
+                }
             </script>
             <button class="btn btn-primary" style="margin-left:260px; margin-top:10px" id="uButton" onclick="unterschreiben()" disabled> Unterschreiben</button>
-            </div>
         </div>
         <div class="container">
   <div class="modal fade" id="myModal" role="dialog" style="padding-top:250px">
@@ -102,11 +103,11 @@
 
 
 </body>
-  </html>
+</html>
 
-  <?php
-    $mnrArray = array('111465','1113456','1113122');
-    $tnrArray = array('T001','T002','T003');
+<?php
+$mnrArray = array('111465','1113456','1113122','111789');
+$tnrArray = array('T001','T002','T003','T004');
 
     if((isset($_GET['mnr'])) && (isset($_GET['tnr']))){
         $mnr = $_GET['mnr'];
