@@ -41,7 +41,7 @@
                 </form>
                 <div class="row">
                     <div class = "col-4">
-                    <a href="pförtner_übersicht.php?tnr=<?php echo $_GET['tnr'];?>" class="button" >Hier klicken</a>
+                        <a href="pförtner_übersicht.php?tnr=<?php echo $_GET['tnr'];?>&flag=<?php echo $_GET['v'];?>" class="button" >Hier klicken</a>
                     </div>
 
                 </div>
