@@ -31,7 +31,7 @@
               <p>Benutzername</p>
             </div>
             <div class="col-9">
-              <input type="text" name="inputName" class="form-control" placeholder="stachsim" required autofocus>
+              <input type="text" name="inputName" class="form-control" placeholder="BBerg" required autofocus>
             </div>
           </div>
 
@@ -55,10 +55,14 @@
         </form>
     </div>
     <?php
-    if (isset($_GET["inputName"])) {
-        if (($_GET["inputName"] == "stachsim") and ($_GET["inputPassword"] == "123")){
-            header("Location: pförtner_hauptmenü.php");
-        } else {
+    if (isset($_GET["inputName"]))
+    {
+        if (($_GET["inputName"] == "BBerg") and ($_GET["inputPassword"] == "123"))
+        {?>
+            <script>
+                window.open("pförtner_hauptmenü.php");
+            </script>
+        <?php  } else {
             echo "Benutzername oder Passwort falsch!";
         }
     }
