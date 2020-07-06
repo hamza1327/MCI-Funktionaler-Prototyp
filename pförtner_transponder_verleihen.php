@@ -82,8 +82,8 @@
         <div class="col-6">
             <hr style="width: 450px; margin-right: 125px; margin-bottom: 20px">
             <div class="row">
-                <div class="col-4" style="margin-botton: 5px"><p> Berechtigung</p></div>
-                <div class="col"><img src='assets/grün.png' height='20px' width='20px' id="farbe" hidden="false" style="margin-bottom: 5px"></div>
+                <div class="col-4" style="margin-bottom: 5px"><p> Berechtigung</p></div>
+                <div class="col"><img src='assets/grün.png' height='20px' width='20px' id="farbe" style="margin-bottom: 5px"></div>
             </div>
             <form>
                 <div class ="row">
