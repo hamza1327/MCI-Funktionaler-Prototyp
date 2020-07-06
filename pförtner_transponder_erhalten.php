@@ -84,6 +84,7 @@
 
 <div class="container" >
     <div class="row" style="margin-top: 200px" >
+
         <div class="col-6">
             <hr style="width: 450px; margin-right: 125px; margin-bottom: 20px">
             <div class="row">
@@ -102,22 +103,40 @@
                     <div class = "col-2"></div>
                 </div>
                 <hr style="width: 450px; margin-right: 125px">
-                <div class ="row" style="margin-top: 30px">
-                    <div class = "col-5"><button class ="btn btn-primary" type="button" onclick="Transponder_prüf()">Berechtigung prüfen</button></div>
-                </div>
             </form>
-            <div class="row">
-                <div class = "col-4">
-                    <button class ="btn btn-primary" id="aButton" type="button" disabled="true" onclick="nextpage('pförtner_transponderÜbersicht.php')">Erhalten durchführen</button>
-<!--                    <a type="button" class ="btn btn-primary" hidden="false" id="aButton" style="color: white;" disabled="true" onclick="" >Erhalten durchführen</a>-->
+
+            <div class ="row justify-content-center w-100">
+                <div class = "col-5" ><button class ="btn btn-primary" type="button" style="width: 150px" onclick="Transponder_prüf()">Berechtigung prüfen</button></div>
+            </div>
+            <div class="row justify-content-center w-100" style="margin-top:10px;">
+                <div class = "col-5">
+                    <button class ="btn btn-primary" id="aButton" type="button" disabled="true" style="width: 150px" onclick="nextpage('pförtner_transponderÜbersicht.php')">Erhalten durchführen</button>
                 </div>
             </div>
         </div>
-        <div class="col-2"><img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="opacity: 0.2">
-            <button class="btn btn-primary" style="margin-left:129px; margin-top:10px" type="button" id="uButton" disabled="true" onclick="unterschreiben();">Unterschreiben</button>
+
+        <div class="col-6">
+            <div class ="row">
+                <div class="col">
+                    <div class ="row justify-content-center">
+                        <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="  opacity: 0.2">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class ="row">
+        <div class="col-6 w-100"></div>
+            <div class="col-6 ">
+            <div class ="row justify-content-center">
+                <button class="btn btn-primary" style=" margin-top:10px" type="button" id="uButton" disabled="true" onclick="unterschreiben();">Unterschreiben</button>
+            </div>
+        </div>
+    </div>
+
 </div>
+
 
 
 <hr style="width: 100%; bottom: 43; position: fixed;">
