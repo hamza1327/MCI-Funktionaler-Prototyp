@@ -8,16 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
-        $( document ).ready( function()
-        {
-            document.getElementById("mnr").value = '';
-            document.getElementById("tnr").value = '';
-            document.getElementById("farbe").hidden = true;
-            document.getElementById("uFeld").src = 'assets/unterschriftsfeld.png';
-            document.getElementById("uButton").disabled = true;
-            document.getElementById("aButton").disabled = true;
-        });
-
         $(function ()
         {
             $('[data-toggle="popover"]').popover();
@@ -25,50 +15,6 @@
         function nextpage( )
         {
             window.location = 'pförtner_transponderÜbersicht.php' + '?tnr=' + document.getElementById("tnr").value + '&flag=e';
-        }
-
-        function Transponder_prüf() {
-            const mnrArray = ['111466', '1113455', '1113111']
-            const tnrArray = ['T003', 'T006', 'T008'];
-            let found = false;
-            let i = 0;
-            for (let i = 0; i < mnrArray.length; i++) {
-                pmnr = document.getElementById("mnr").value;
-                ptnr = document.getElementById("tnr").value;
-            }
-            if (mnrArray == pmnr[i] && tnrArray == ptnr[i]) {
-            }
-            while (i < mnrArray.length && found == 0) {
-                if (pmnr == mnrArray[i] && ptnr == tnrArray[i]) {
-                    found = true;
-                    groupAktion('Ja');
-                }
-                i++;
-            }
-            if (found == false) {
-                groupAktion('Nein');
-            }
-        }
-        function groupAktion( pname )
-        {
-            if( pname == 'Ja')
-            {
-                document.getElementById("farbe").hidden = false;
-                document.getElementById("uFeld").style.opacity = "1";
-                document.getElementById("uButton").disabled = false;
-                document.getElementById("farbe").src = 'assets/grün.png';
-            } else {
-                document.getElementById("aButton").disabled = true;
-                document.getElementById("uButton").disabled = true;
-                document.getElementById("farbe").src = 'assets/rot.png';
-                document.getElementById("farbe").hidden = false;
-            }
-        }
-
-        function unterschreiben()
-        {
-            document.getElementById("uFeld").src = 'assets/unterschriftsfeld_schrift.png';
-            document.getElementById("aButton").disabled = false;
         }
     </script>
 
@@ -87,16 +33,7 @@
 
         <div class="col-6">
             <hr style="width: 450px; margin-right: 125px; margin-bottom: 20px">
-            <div class="row">
-                <div class="col-4" style="margin-bottom: 5px"><p> Berechtigung</p></div>
-                <div class="col"><img src='assets/grün.png' height='20px' width='20px' id="farbe" style="margin-bottom: 5px"></div>
-            </div>
             <form>
-                <div class ="row">
-                    <div class = "col-4" style="margin-top: 5px"><p> Matrikelnummer</p></div>
-                    <div class = "col"><input type = "text" class="form-control" name="mnr" id="mnr" data-toggle="popover" title="Matrikelnummer" data-content="111466 / 1113455 / 1113111"></div>
-                    <div class="col-2"></div>
-                </div>
                 <div class ="row" style="margin-top: 5px">
                     <div class = "col-4" style="margin-top: 5px"><p> Transponder Nr.</p></div>
                     <div class = "col"><input type = "text" class="form-control" name="tnr" id="tnr" data-toggle="popover" title="Transponder Nr." data-content="T003 / T006 / T008"></div>
@@ -105,47 +42,19 @@
                 <hr style="width: 450px; margin-right: 125px">
             </form>
 
-            <div class ="row justify-content-center w-100">
-                <div class = "col-5" ><button class ="btn btn-primary" type="button" style="width: 150px" onclick="Transponder_prüf()">Berechtigung prüfen</button></div>
-            </div>
             <div class="row justify-content-center w-100" style="margin-top:10px;">
                 <div class = "col-5">
-                    <button class ="btn btn-primary" id="aButton" type="button" disabled="true" style="width: 150px" onclick="nextpage('pförtner_transponderÜbersicht.php')">Erhalten durchführen</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-6">
-            <div class ="row">
-                <div class="col">
-                    <div class ="row justify-content-center">
-                        <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="  opacity: 0.2">
-                    </div>
+                    <button class ="btn btn-primary" id="aButton" type="button" style="width: 150px" onclick="nextpage('pförtner_transponderÜbersicht.php')">Erhalten durchführen</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class ="row">
-        <div class="col-6 w-100"></div>
-            <div class="col-6 ">
-            <div class ="row justify-content-center">
-                <button class="btn btn-primary" style=" margin-top:10px" type="button" id="uButton" disabled="true" onclick="unterschreiben();">Unterschreiben</button>
-            </div>
-        </div>
-    </div>
-
 </div>
-
 
 
 <hr style="width: 100%; bottom: 43; position: fixed;">
 <p style="bottom: 5; left: 20; position: fixed;">Impressum | Datenschutz</p>
 <img src="assets/frage.png" alt="" width="50px" height="50px" style="right: 41; bottom: 36; position: fixed;">
-
-
-
-
 
 </body>
 </html>
