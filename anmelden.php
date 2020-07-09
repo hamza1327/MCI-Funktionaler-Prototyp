@@ -58,11 +58,9 @@
     if (isset($_GET["inputName"]))
     {
         if (($_GET["inputName"] == "BBerg") and ($_GET["inputPassword"] == "123"))
-        {?>
-            <script>
-                window.open("pförtner_hauptmenü.php");
-            </script>
-        <?php  } else {
+        {
+            header("Location: pförtner_hauptmenü.php");
+          } else {
             echo "Benutzername oder Passwort falsch!";
         }
     }
