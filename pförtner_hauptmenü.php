@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md fixed-top" style="background-color: #82187c;">
-    <div class="navbar-Text w-100 text-left"><a href="anmelden.php" style="font-size: 20px; margin-left: 15px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 15px">Logout</a></div>
+    <div class="navbar-Text w-100 text-left"><a href="anmelden.php" style="font-size: 20px; margin-left: 15px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; padding-left: 15px">Abmelden</a></div>
     <div class="navbar-text w-100 pl-10 text-right order-1" style="font-size: 20px; margin-right: 15px;font-family: Arial, Helvetica, sans-serif; color: white;">Angemeldet als Bolle Berg | 27.06.2020 14:05</div>
 </nav>
 <div class="container-fluid" style="background-color: white; margin-top: 60px; border-bottom: 1px solid black">
