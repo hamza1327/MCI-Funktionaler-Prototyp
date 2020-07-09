@@ -104,7 +104,7 @@
             </div>
             <div class="row justify-content-center w-100" style="margin-top:10px;">
                 <div class = "col-5">
-                    <button class ="btn btn-primary" id="aButton" type="button" disabled="true" style="width: 150px" onclick="nextpage('pförtner_transponderÜbersicht.php')">Verleihen durchführen</button>
+                    <button class ="btn btn-primary" id="aButton" type="button" disabled="true" style="width: 150px" data-toggle="modal" data-target="#myModal">Verleihen durchführen</button>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
             <div class ="row">
                 <div class="col">
                     <div class ="row justify-content-center">
-                        <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="  opacity: 0.2">
+                        <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style=" opacity: 0.2">
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
     </div>
 
     <div class="container">
-        <div class="modal fade" id="myModal" style="padding-top:250px">
+        <div class="modal fade" id="myModal" style="padding-top:150px">
             <div class="modal-dialog" >
                 <!-- Modal content-->
                 <div class="modal-content">
