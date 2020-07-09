@@ -44,7 +44,25 @@
 
             <div class="row justify-content-center w-100" style="margin-top:10px;">
                 <div class = "col-5">
-                    <button class ="btn btn-primary" id="aButton" type="button" style="width: 150px" onclick="nextpage('pförtner_transponderÜbersicht.php')">Erhalten durchführen</button>
+                    <button class ="btn btn-primary" id="aButton" type="button" style="width: 150px" data-toggle="modal" data-target="#myModal" >Erhalten durchführen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="modal fade" id="myModal" style="padding-top:250px">
+        <div class="modal-dialog" >
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="font-size:23px">Möchten Sie die Rückgabe wirklich durchführen?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-footer" >
+                    <button type="button" onclick="nextpage('pförtner_transponderÜbersicht.php')" class="btn btn-primary mr-auto" >Ja</button>
+                    <button type="button" class="btn btn-primary " data-dismiss="modal">Abbrechen</button>
                 </div>
             </div>
         </div>
