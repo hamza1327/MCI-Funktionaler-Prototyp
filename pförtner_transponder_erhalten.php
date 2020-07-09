@@ -8,6 +8,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
+    $( document ).ready( function()
+       {
+           document.getElementById("tnr").value = '';
+           document.getElementById("uFeld").src = 'assets/unterschriftsfeld.png';
+           document.getElementById("aButton").disabled = true;
+       });
+
         $(function ()
         {
             $('[data-toggle="popover"]').popover();
@@ -15,6 +22,12 @@
         function nextpage( )
         {
             window.location = 'pförtner_transponderÜbersicht.php' + '?tnr=' + document.getElementById("tnr").value + '&flag=e';
+        }
+
+        function unterschreiben()
+        {
+            document.getElementById("uFeld").src = 'assets/unterschriftsfeld_schrift.png';
+            document.getElementById("aButton").disabled = false;
         }
     </script>
 
@@ -48,8 +61,27 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
+
+<div class="col-6">
+           <div class ="row">
+               <div class="col">
+                   <div class ="row justify-content-center">
+                       <img src="assets/unterschriftsfeld.png" alt="unterschriftsfeld" width="384px" height="240px" id="uFeld" style="">
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class ="row">
+       <div class="col-6 w-100"></div>
+           <div class="col-6 ">
+           <div class ="row justify-content-center">
+               <button class="btn btn-primary" style=" margin-top:10px" type="button" id="uButton" onclick="unterschreiben();">Unterschreiben</button>
+           </div>
+       </div>
+     </div>
+ </div>
 
 <div class="container">
     <div class="modal fade" id="myModal" style="padding-top:250px">
