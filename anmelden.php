@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +6,6 @@
 <link href="css/anmelden.css" rel="stylesheet">
 
 </head>
-
   <body>
     <div class="container-fluid">
 

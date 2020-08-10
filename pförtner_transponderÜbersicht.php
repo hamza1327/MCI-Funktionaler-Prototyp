@@ -177,6 +177,10 @@
                 }
             }
         }
+        function fun_enter(  ) {
+            fun_delete();
+            document.getElementById("myBtn").click();
+        }
     </script>
 </head>
 <body>
@@ -191,12 +195,10 @@
 <div class="container" >
     <div class="row " style=" margin-top: 30px ">
         <div class="col-sm-3" style=" margin-left: 260px" >
-            <form name="form" action="" method="push">
                 <div class="row" >
-                    <input type="text" class="form-control" name="search" style="width: 200px">
-                    <button class="btn btn-primary" type="button" onclick="fun_Search(search.value)" >Suchen</button>
+                    <input type="text" id="myInput" name="search" style="width: 200px" onkeypress=" if(event.key === 'Enter') fun_enter()">
+                    <button class="btn btn-primary" id="myBtn" type="button" onclick="fun_Search(myInput.value)" >Suchen</button>
                 </div>
-            </form>
         </div>
         <div class="col-sm-3" >
             <div class="btn-group" role="group" >
